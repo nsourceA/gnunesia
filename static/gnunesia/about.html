@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>gNewNesia</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- Gunakan CDN Icon dari Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      integrity="sha512-rXn6Cj1+7UYOEQ6ID7ekY6VZMjLb0x3vE7n3FdBnUeIXVrxaylT3hFzWZzX0CYoUXiBpK3iRhI1v8qyXf8ZjvA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <!-- Navigasi melayang bawah -->
+    <div class="floating-nav" id="floatingNav">
+      <a href="home.html" title="Beranda"><i class="fas fa-house"></i></a>
+      <a href="articles.html" title="Artikel"><i class="fas fa-book"></i></a>
+      <a href="about.html" title="Tentang Kami"><i class="fab fa-linux"></i></a>
+      <a href="community.html" title="Komunitas"
+        ><i class="fas fa-globe"></i
+      ></a>
+    </div>
+
+  <!-- Header Halaman -->
+  <header class="banner">
+    <h1>Tentang Kami</h1>
+    <p>Mengenal lebih dekat tentang siapa kami, misi kami, dan apa yang sedang kami bangun</p>
+  </header>
+
+  <!-- Konten Tentang Kami -->
+  <section class="latest">
+    <!-- Who we are -->
+    <div class="about-section">
+      <h2>Who we are?</h2>
+      <p>Kami adalah komunitas independen yang berfokus pada edukasi, eksplorasi, dan penyebaran teknologi berbasis Linux dan open source kepada semua kalangan.</p>
+    </div>
+
+    <!-- Visi & Misi -->
+    <div class="about-section">
+      <h2>Visi & Misi</h2>
+      <p><strong>Visi:</strong> Menjadi sumber terpercaya dalam dunia Linux dan open source yang bebas iklan dan penuh kebebasan.</p>
+      <p><strong>Misi:</strong>
+        <ul>
+          <li>Menyediakan artikel dan panduan berkualitas tinggi seputar Linux dan software open source</li>
+          <li>Mendorong kebebasan digital melalui edukasi dan informasi terbuka</li>
+          <li>Menghubungkan pengguna baru dan komunitas melalui konten yang inklusif</li>
+        </ul>
+      </p>
+    </div>
+
+    <!-- Proyek Kita -->
+    <div class="about-section">
+      <h2>Proyek Kita</h2>
+      <p>Situs ini adalah salah satu proyek awal. Kami juga sedang merancang repositori dokumentasi, video tutorial, dan rencana komunitas daring yang akan hadir dalam waktu dekat.</p>
+    </div>
+  </section>
+
+  <script>
+    const nav = document.getElementById("floatingNav");
+    let scrollTimeout;
+
+    window.addEventListener("scroll", () => {
+      nav.classList.add("hide");
+
+      clearTimeout(scrollTimeout);
+      scrollTimeout = setTimeout(() => {
+        nav.classList.remove("hide");
+      }, 300);
+    });
+  </script>
+    <!-- Footer opsional -->
+    <footer>
+      <p>&copy; 2025 Gnunesia</p>
+    </footer>
+</body>
+</html>

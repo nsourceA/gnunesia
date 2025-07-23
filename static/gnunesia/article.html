@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Linux Freedom Media</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- Gunakan CDN Icon dari Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      integrity="sha512-rXn6Cj1+7UYOEQ6ID7ekY6VZMjLb0x3vE7n3FdBnUeIXVrxaylT3hFzWZzX0CYoUXiBpK3iRhI1v8qyXf8ZjvA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <!-- Navigasi -->
+    <div class="floating-nav">
+      <a href="home.html" title="Beranda"><i class="fas fa-house"></i></a>
+      <a href="article.html" title="Artikel"><i class="fas fa-book"></i></a>
+      <a href="about.html" title="Tentang Kami"><i class="fab fa-linux"></i></a>
+      <a href="community.html" title="Komunitas"
+        ><i class="fas fa-globe"></i
+      ></a>
+    </div>
+
+    <!-- Konten Artikel -->
+    <h1 id="judul-artikel"></h1>
+    <p id="meta-artikel"></p>
+    <img id="banner-artikel" src="" alt="Banner Artikel" />
+    <div id="isi-artikel"></div>
+
+    <footer>
+      <p>&copy; 2025 Linux Freedom Media</p>
+    </footer>
+
+    <!-- Data Artikel -->
+    <script>
+      const params = new URLSearchParams(window.location.search);
+      const id = params.get("id");
+
+      fetch("js/articles.json")
+        .then((response) => response.json())
+        .then((articles) => {
+          const artikel = articles.find((a) => a.id === id);
+
+          if (artikel) {
+            document.title = artikel.judul + " - Linux Freedom Media";
+            document.getElementById("judul-artikel").textContent =
+              artikel.judul;
+            document.getElementById(
+              "meta-artikel"
+            ).textContent = `Dipublikasikan: ${artikel.tanggal} | Oleh: ${artikel.penulis}`;
+            document.getElementById("banner-artikel").src = artikel.gambar;
+            document.getElementById("isi-artikel").innerHTML = artikel.konten;
+          } else {
+            document.getElementById("judul-artikel").textContent =
+              "Artikel tidak ditemukan.";
+          }
+        })
+        .catch((error) => {
+          console.error("Gagal memuat artikel:", error);
+          document.getElementById("judul-artikel").textContent =
+            "Gagal memuat artikel.";
+        });
+    </script>
+  </body>
+</html>

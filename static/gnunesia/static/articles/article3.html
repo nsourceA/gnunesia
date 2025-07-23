@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gerakan Free Software dan pengaruhnya terhadap open source</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      body {
+        font-family: sans-serif;
+        margin: 0;
+        padding: 0;
+        line-height: 1.6;
+        background-color: #f9f9f9;
+        color: #333;
+      }
+
+      .floating-nav {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background: white;
+        padding: 10px 15px;
+        border-radius: 8px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+        display: flex;
+        flex-direction: row;
+        gap: 15px;
+        align-items: center;
+        transition: transform 0.3s ease;
+        z-index: 1000;
+      }
+
+      .floating-nav a {
+        color: #2c3e50;
+        font-size: 20px;
+        text-decoration: none;
+      }
+
+      .floating-nav.hide {
+        transform: translateY(150%);
+      }
+
+      header {
+        text-align: center;
+        padding: 2rem 1rem 1rem;
+        background-color: #fff;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      header h1 {
+        margin-bottom: 0.5rem;
+      }
+
+      .meta {
+        color: #777;
+        font-size: 0.9rem;
+      }
+
+      main {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 2rem 1rem;
+        background-color: #fff;
+      }
+
+      main img.banner {
+        display: block;
+        margin: 2rem auto;
+        max-width: 80%;
+        height: auto;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      article p {
+        margin-bottom: 1.5rem;
+        text-align: justify;
+      }
+
+      footer {
+        text-align: center;
+        padding: 1rem;
+        background-color: #eee;
+        font-size: 0.9rem;
+        color: #666;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigasi melayang bawah -->
+    <div class="floating-nav" id="floatingNav">
+      <a href="../../home.html" title="Beranda"><i class="fas fa-house"></i></a>
+      <a href="../../articles.html" title="Artikel"
+        ><i class="fas fa-book"></i
+      ></a>
+      <a href="../../about.html" title="Tentang Kami"
+        ><i class="fab fa-linux"></i
+      ></a>
+      <a href="../../community.html" title="Komunitas"
+        ><i class="fas fa-globe"></i
+      ></a>
+    </div>
+
+    <header>
+      <h1>Gerakan Free Software dan pengaruhnya terhadap open source</h1>
+      <p class="meta">Dipublikasikan: 23 Juli 2025 | Oleh: Faisal (Admin)</p>
+    </header>
+
+    <main>
+      <img
+        src="../../static/assets/img/free_software_movement.jpg"
+        alt="Banner Kernel Linux"
+        class="banner"
+      />
+      <article>
+        <p>
+          Gerakan Free Software adalah sebuah gerakan sosial dan teknologi yang dimulai pada awal 1980-an oleh Richard Stallman, yang bertujuan untuk memastikan kebebasan pengguna dalam menggunakan, mempelajari, memodifikasi, dan mendistribusikan perangkat lunak. Gerakan ini bukan hanya soal teknis, tapi juga ideologi yang memandang perangkat lunak sebagai sesuatu yang seharusnya melayani penggunanya, bukan membatasi mereka.
+        </p>
+        <p>
+          Free Software Foundation (FSF) yang didirikan Stallman, mendefinisikan empat kebebasan mendasar bagi pengguna perangkat lunak:
+          <ol>
+            <li>Kebebasan menjalankan program untuk tujuan apapun</li>
+            <li>Kebebasan mempelajari bagaimana program bekerja, dan mengubahnya sesuai kebutuhan</li>
+            <li>Kebebasan mendistribusikan salinan agar dapat membantu orang lain</li>
+            <li>Kebebasan menyebarkan versi modifikasi kepada orang lain</li>
+          </ol>
+        </p>
+        <p>
+          Gerakan ini melahirkan <strong>GNU Project</strong>, sebuah sistem operasi lengkap yang dikembangkan untuk menghormati prinsip-prinsip kebebasan ini. Ketika kernel Linux dirilis oleh Linus Torvalds pada tahun 1991, ia melengkapi kekosongan dari proyek GNU sehingga terciptalah sistem lengkap yang dikenal sebagai <strong>GNU/Linux</strong>.
+        </p>
+        <p>
+          Pengaruh gerakan Free Software terhadap dunia <em>open source</em> sangat besar. Meskipun keduanya memiliki banyak kesamaan secara teknis, pendekatannya berbeda. <strong>Open source</strong> lebih fokus pada manfaat kolaborasi dan efisiensi teknis, sedangkan <strong>Free Software</strong> menekankan kebebasan etis dan sosial.
+        </p>
+        <p>
+          Tanpa filosofi dari gerakan Free Software, mungkin tidak akan ada komunitas global yang begitu kuat dalam mengembangkan proyek-proyek terbuka seperti Linux, Firefox, LibreOffice, dan ribuan proyek lainnya. Free Software membuka jalan bagi model pengembangan berbasis komunitas, transparansi, dan kepercayaan.
+        </p>
+        <p>
+          Hingga hari ini, Free Software tetap menjadi dasar moral dan ideologis dari banyak proyek open source. Meskipun istilah “open source” lebih populer secara umum, nilai-nilai yang diperjuangkan oleh gerakan Free Software tetap menjadi penggerak penting di balik ekosistem teknologi yang bebas dan terbuka.
+        </p>
+      </article>
+    </main>
+
+    <script>
+      const nav = document.getElementById("floatingNav");
+      let scrollTimeout;
+
+      window.addEventListener("scroll", () => {
+        nav.classList.add("hide");
+
+        clearTimeout(scrollTimeout);
+        scrollTimeout = setTimeout(() => {
+          nav.classList.remove("hide");
+        }, 300);
+      });
+    </script>
+    <!-- Footer opsional -->
+    <footer>
+      <p>&copy; 2025 Gnunesia</p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Distro Linux untuk memulai perjalanan di dunia open source</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      body {
+        font-family: sans-serif;
+        margin: 0;
+        padding: 0;
+        line-height: 1.6;
+        background-color: #f9f9f9;
+        color: #333;
+      }
+
+      .floating-nav {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background: white;
+        padding: 10px 15px;
+        border-radius: 8px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+        display: flex;
+        flex-direction: row;
+        gap: 15px;
+        align-items: center;
+        transition: transform 0.3s ease;
+        z-index: 1000;
+      }
+
+      .floating-nav a {
+        color: #2c3e50;
+        font-size: 20px;
+        text-decoration: none;
+      }
+
+      .floating-nav.hide {
+        transform: translateY(150%);
+      }
+
+      header {
+        text-align: center;
+        padding: 2rem 1rem 1rem;
+        background-color: #fff;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      header h1 {
+        margin-bottom: 0.5rem;
+      }
+
+      .meta {
+        color: #777;
+        font-size: 0.9rem;
+      }
+
+      main {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 2rem 1rem;
+        background-color: #fff;
+      }
+
+      main img.banner {
+        display: block;
+        margin: 2rem auto;
+        max-width: 80%;
+        height: auto;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      article p {
+        margin-bottom: 1.5rem;
+        text-align: justify;
+      }
+
+      footer {
+        text-align: center;
+        padding: 1rem;
+        background-color: #eee;
+        font-size: 0.9rem;
+        color: #666;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigasi melayang bawah -->
+    <div class="floating-nav" id="floatingNav">
+      <a href="../../home.html" title="Beranda"><i class="fas fa-house"></i></a>
+      <a href="../../articles.html" title="Artikel"
+        ><i class="fas fa-book"></i
+      ></a>
+      <a href="../../about.html" title="Tentang Kami"
+        ><i class="fab fa-linux"></i
+      ></a>
+      <a href="../../community.html" title="Komunitas"
+        ><i class="fas fa-globe"></i
+      ></a>
+    </div>
+
+    <header>
+      <h1>Distro Linux untuk memulai perjalanan di dunia open source</h1>
+      <p class="meta">Dipublikasikan: 23 Juli 2025 | Oleh: Faisal (Admin)</p>
+    </header>
+
+    <main>
+      <img
+        src="../../static/assets/img/linux-distro.jpg"
+        alt="Banner Kernel Linux"
+        class="banner"
+      />
+      <article>
+        <p>
+          Memulai perjalanan di dunia open source bisa menjadi langkah yang
+          membebaskan dan menyenangkan. Salah satu gerbang utama menuju dunia
+          ini adalah dengan menggunakan distribusi Linux, atau yang biasa
+          disebut "distro". Distro Linux adalah sistem operasi berbasis kernel
+          Linux, lengkap dengan berbagai perangkat lunak bebas yang dikemas
+          untuk berbagai kebutuhan, baik pemula hingga profesional.
+        </p>
+        <p>
+          Bagi pemula, memilih distro yang tepat sangat penting agar pengalaman
+          pertama tidak terasa rumit atau membingungkan. Beberapa distro Linux
+          dirancang dengan antarmuka yang ramah pengguna, proses instalasi yang
+          sederhana, dan dukungan komunitas yang luas—semuanya menjadi fondasi
+          yang baik untuk belajar dan tumbuh di lingkungan open source.
+        </p>
+        <p>
+          Berikut adalah beberapa distro Linux yang direkomendasikan untuk
+          pemula:
+        </p>
+        <ul>
+          <li>
+            <strong>Ubuntu:</strong> Salah satu distro paling populer di dunia.
+            Ubuntu dikenal karena kemudahan instalasinya, antarmuka GNOME yang
+            modern, serta dokumentasi dan komunitas yang sangat aktif. Cocok
+            untuk pemula yang ingin sistem yang "langsung jalan" tanpa
+            konfigurasi rumit.
+          </li>
+          <li>
+            <strong>Linux Mint:</strong> Distro berbasis Ubuntu dengan tampilan
+            klasik dan ringan. Mint sangat cocok bagi pengguna yang sebelumnya
+            terbiasa dengan Windows, berkat desktop Cinnamon yang intuitif dan
+            pengalaman pengguna yang konsisten.
+          </li>
+          <li>
+            <strong>elementary OS:</strong> Dikenal dengan desain yang elegan
+            dan bersih, mirip macOS. Sangat cocok bagi pemula yang mengutamakan
+            estetika dan kesederhanaan, dengan fokus pada pengalaman pengguna
+            yang minimalis.
+          </li>
+          <li>
+            <strong>Fedora Workstation:</strong> Distro yang didukung oleh Red
+            Hat, dengan teknologi terbaru dan stabilitas tinggi. Fedora cocok
+            untuk mereka yang ingin belajar lebih dalam soal sistem Linux tanpa
+            kehilangan kemudahan penggunaan.
+          </li>
+          <li>
+            <strong>Zorin OS:</strong> Didesain khusus untuk memudahkan transisi
+            dari Windows ke Linux, dengan tampilan yang familiar dan tools untuk
+            menjalankan aplikasi Windows melalui Wine.
+          </li>
+        </ul>
+        <p>
+          Semua distro di atas bersifat open source dan dapat digunakan secara
+          gratis. Dengan mencoba salah satu dari distro ini, kamu tidak hanya
+          mendapatkan sistem operasi yang bebas dari iklan dan pelacakan, tapi
+          juga membuka pintu menuju komunitas global yang peduli pada kebebasan
+          digital, transparansi, dan kolaborasi terbuka.
+        </p>
+        <p>
+          Langkah pertama ini bisa jadi awal dari perjalanan yang
+          panjang—belajar command line, memahami sistem file Linux, mencoba
+          perangkat lunak bebas seperti LibreOffice, GIMP, dan VLC, serta
+          mungkin suatu hari berkontribusi pada proyek open source yang kamu
+          gunakan sehari-hari.
+        </p>
+        <p>
+          Dunia open source bukan sekadar menggunakan sistem gratis, tetapi
+          tentang mengambil kembali kendali atas teknologimu. Dan Linux adalah
+          langkah awal terbaik untuk itu.
+        </p>
+      </article>
+    </main>
+
+    <script>
+      const nav = document.getElementById("floatingNav");
+      let scrollTimeout;
+
+      window.addEventListener("scroll", () => {
+        nav.classList.add("hide");
+
+        clearTimeout(scrollTimeout);
+        scrollTimeout = setTimeout(() => {
+          nav.classList.remove("hide");
+        }, 300);
+      });
+    </script>
+    <!-- Footer opsional -->
+    <footer>
+      <p>&copy; 2025 Gnunesia</p>
+    </footer>
+  </body>
+</html>

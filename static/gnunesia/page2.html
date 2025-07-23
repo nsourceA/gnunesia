@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>gNewNesia</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- Gunakan CDN Icon dari Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      integrity="sha512-rXn6Cj1+7UYOEQ6ID7ekY6VZMjLb0x3vE7n3FdBnUeIXVrxaylT3hFzWZzX0CYoUXiBpK3iRhI1v8qyXf8ZjvA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <!-- Navigasi melayang bawah -->
+    <div class="floating-nav" id="floatingNav">
+      <a href="home.html" title="Beranda"><i class="fas fa-house"></i></a>
+      <a href="articles.html" title="Artikel"><i class="fas fa-book"></i></a>
+      <a href="about.html" title="Tentang Kami"><i class="fab fa-linux"></i></a>
+      <a href="community.html" title="Komunitas"
+        ><i class="fas fa-globe"></i
+      ></a>
+    </div>
+
+    <!-- Banner utama -->
+    <header class="banner">
+      <p>
+        Dunia open source dibangun atas kebebasan, transparansi, dan kolaborasi
+        lintas komunitas
+      </p>
+    </header>
+
+    <!-- Bagian artikel terbaru (Latest) -->
+    <section class="latest">
+      <h2>Terbaru</h2>
+      <div class="article-grid">
+        <!-- Artikel Dummy #1 -->
+        <div class="article-card">
+          <h3>Judul Artikel 1</h3>
+          <img
+            src="https://via.placeholder.com/300x200"
+            alt="Thumbnail Artikel 1"
+          />
+          <a href="../gnunesia/static/articles/article1.html" class="read-more"
+            >Selengkapnya</a
+          >
+        </div>
+
+        <!-- Artikel Dummy #2 -->
+        <div class="article-card">
+          <h3>Judul Artikel 2</h3>
+          <img
+            src="https://via.placeholder.com/300x200"
+            alt="Thumbnail Artikel 2"
+          />
+          <a href="artikel2.html" class="read-more">Selengkapnya</a>
+        </div>
+
+        <!-- Artikel Dummy #3 -->
+        <div class="article-card">
+          <h3>Judul Artikel 3</h3>
+          <img
+            src="https://via.placeholder.com/300x200"
+            alt="Thumbnail Artikel 3"
+          />
+          <a href="artikel3.html" class="read-more">Selengkapnya</a>
+        </div>
+
+        <!-- Artikel Dummy #4 -->
+        <div class="article-card">
+          <h3>Judul Artikel 4</h3>
+          <img
+            src="https://via.placeholder.com/300x200"
+            alt="Thumbnail Artikel 4"
+          />
+          <a href="artikel4.html" class="read-more">Selengkapnya</a>
+        </div>
+      </div>
+
+      <!-- Pagination (halaman berikutnya) -->
+      <div class="pagination">
+        <a href="home.html" class="page">1</a>
+        <a href="page2.html" class="page active">2</a>
+        <a href="page3.html" class="page">3</a>
+      </div>
+    </section>
+
+    <script>
+      const nav = document.getElementById("floatingNav");
+      let scrollTimeout;
+
+      window.addEventListener("scroll", () => {
+        nav.classList.add("hide");
+
+        clearTimeout(scrollTimeout);
+        scrollTimeout = setTimeout(() => {
+          nav.classList.remove("hide");
+        }, 300);
+      });
+    </script>
+    <!-- Footer opsional -->
+    <footer>
+      <p>&copy; 2025 Gnunesia</p>
+    </footer>
+  </body>
+</html>

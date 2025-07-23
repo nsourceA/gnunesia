@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mengenal Kernel Linux beserta sejarahnya</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      body {
+        font-family: sans-serif;
+        margin: 0;
+        padding: 0;
+        line-height: 1.6;
+        background-color: #f9f9f9;
+        color: #333;
+      }
+
+      .floating-nav {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background: white;
+        padding: 10px 15px;
+        border-radius: 8px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+        display: flex;
+        flex-direction: row;
+        gap: 15px;
+        align-items: center;
+        transition: transform 0.3s ease;
+        z-index: 1000;
+      }
+
+      .floating-nav a {
+        color: #2c3e50;
+        font-size: 20px;
+        text-decoration: none;
+      }
+
+      .floating-nav.hide {
+        transform: translateY(150%);
+      }
+
+      header {
+        text-align: center;
+        padding: 2rem 1rem 1rem;
+        background-color: #fff;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      header h1 {
+        margin-bottom: 0.5rem;
+      }
+
+      .meta {
+        color: #777;
+        font-size: 0.9rem;
+      }
+
+      main {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 2rem 1rem;
+        background-color: #fff;
+      }
+
+      main img.banner {
+        display: block;
+        margin: 2rem auto;
+        max-width: 80%;
+        height: auto;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      article p {
+        margin-bottom: 1.5rem;
+        text-align: justify;
+      }
+
+      footer {
+        text-align: center;
+        padding: 1rem;
+        background-color: #eee;
+        font-size: 0.9rem;
+        color: #666;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigasi melayang bawah -->
+    <div class="floating-nav" id="floatingNav">
+      <a href="../../home.html" title="Beranda"><i class="fas fa-house"></i></a>
+      <a href="../../articles.html" title="Artikel"
+        ><i class="fas fa-book"></i
+      ></a>
+      <a href="../../about.html" title="Tentang Kami"
+        ><i class="fab fa-linux"></i
+      ></a>
+      <a href="../../community.html" title="Komunitas"
+        ><i class="fas fa-globe"></i
+      ></a>
+    </div>
+
+    <header>
+      <h1>Mengenal Kernel Linux beserta sejarahnya</h1>
+      <p class="meta">Dipublikasikan: 23 Juli 2025 | Oleh: Faisal (Admin)</p>
+    </header>
+
+    <main>
+      <img
+        src="../../static/assets/img/the_linux_kernel.jpg"
+        alt="Banner Kernel Linux"
+        class="banner"
+      />
+      <article>
+        <p>
+          Kernel Linux adalah inti dari sistem operasi berbasis GNU/Linux. Ia
+          berperan sebagai penghubung antara perangkat keras (hardware) dan
+          perangkat lunak (software), mengatur komunikasi di antara keduanya
+          agar berjalan dengan lancar. Kernel inilah yang menangani semua
+          permintaan akses ke perangkat keras seperti prosesor, memori,
+          penyimpanan, dan perangkat I/O (input/output). Tanpa kernel, program
+          tidak akan bisa berjalan karena tidak memiliki cara untuk berinteraksi
+          dengan perangkat keras.
+        </p>
+        <p>
+          Proyek kernel Linux dimulai oleh Linus Torvalds, seorang mahasiswa
+          asal Finlandia, pada tahun 1991. Ia menciptakan kernel ini sebagai
+          proyek hobi karena merasa tidak puas dengan sistem operasi yang ada
+          saat itu, seperti MINIX. Linus lalu membagikan kode sumber kernel
+          Linux versi awal di internet dengan lisensi bebas, sehingga siapa saja
+          dapat menggunakannya, mempelajarinya, dan berkontribusi dalam
+          pengembangannya. Keputusan ini menjadi titik awal dari kolaborasi
+          global yang sangat besar.
+        </p>
+        <p>
+          Sejak saat itu, kernel Linux tumbuh menjadi salah satu proyek open
+          source terbesar di dunia. Ia menjadi fondasi dari berbagai distribusi
+          (distro) Linux yang digunakan secara luas, tidak hanya untuk komputer
+          desktop dan laptop, tetapi juga server, superkomputer, perangkat
+          mobile (seperti Android), perangkat Internet of Things (IoT), dan
+          sistem embedded di berbagai industri—dari otomotif hingga peralatan
+          rumah tangga.
+        </p>
+        <p>
+          Salah satu kekuatan utama Linux terletak pada sifatnya yang open
+          source. Artinya, kode sumbernya tersedia secara terbuka dan dapat
+          diakses siapa saja. Hal ini memungkinkan komunitas global, termasuk
+          individu, institusi pendidikan, perusahaan, hingga organisasi
+          non-profit, untuk mempelajari cara kerja kernel, memodifikasinya,
+          menyesuaikannya dengan kebutuhan masing-masing, serta membagikan ulang
+          versi yang telah disesuaikan. Ini menciptakan lingkungan pengembangan
+          yang sangat dinamis dan inovatif.
+        </p>
+        <p>
+          Selain itu, pengembangan kernel Linux dilakukan secara terbuka melalui
+          mailing list dan repositori Git. Ribuan kontributor dari seluruh
+          dunia, termasuk dari perusahaan besar seperti Intel, IBM, Google, dan
+          Red Hat, terlibat dalam proses ini. Setiap perubahan dikaji secara
+          menyeluruh dan dikelola oleh maintainer dari berbagai subsistem,
+          dengan Linus Torvalds sebagai pemegang keputusan akhir (benevolent
+          dictator) untuk integrasi ke branch utama.
+        </p>
+        <p>
+          Kernel Linux juga dikenal karena skalabilitas dan stabilitasnya yang
+          tinggi. Ia dapat berjalan di berbagai jenis perangkat keras, dari
+          sistem berspesifikasi rendah hingga server berskala besar. Fitur-fitur
+          seperti multitasking, manajemen memori yang efisien, sistem file
+          modern, dan dukungan driver yang luas membuatnya menjadi pilihan utama
+          untuk berbagai kebutuhan sistem operasi modern.
+        </p>
+        <p>
+          Dengan kekuatan komunitas, filosofi keterbukaan, dan semangat
+          kolaboratif yang kuat, kernel Linux terus berkembang hingga hari ini,
+          menjadi simbol utama dari keberhasilan model pengembangan perangkat
+          lunak bebas dan open source. Ia tidak hanya menjadi bagian dari
+          teknologi, tetapi juga gerakan sosial untuk menciptakan teknologi yang
+          adil, transparan, dan bisa diakses oleh siapa saja.
+        </p>
+      </article>
+    </main>
+
+    <script>
+      const nav = document.getElementById("floatingNav");
+      let scrollTimeout;
+
+      window.addEventListener("scroll", () => {
+        nav.classList.add("hide");
+
+        clearTimeout(scrollTimeout);
+        scrollTimeout = setTimeout(() => {
+          nav.classList.remove("hide");
+        }, 300);
+      });
+    </script>
+    <!-- Footer opsional -->
+    <footer>
+      <p>&copy; 2025 Gnunesia</p>
+    </footer>
+  </body>
+</html>

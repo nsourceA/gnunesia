@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mengenal Richard Stallman dan GNU Project</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      body {
+        font-family: sans-serif;
+        margin: 0;
+        padding: 0;
+        line-height: 1.6;
+        background-color: #f9f9f9;
+        color: #333;
+      }
+
+      .floating-nav {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background: white;
+        padding: 10px 15px;
+        border-radius: 8px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+        display: flex;
+        flex-direction: row;
+        gap: 15px;
+        align-items: center;
+        transition: transform 0.3s ease;
+        z-index: 1000;
+      }
+
+      .floating-nav a {
+        color: #2c3e50;
+        font-size: 20px;
+        text-decoration: none;
+      }
+
+      .floating-nav.hide {
+        transform: translateY(150%);
+      }
+
+      header {
+        text-align: center;
+        padding: 2rem 1rem 1rem;
+        background-color: #fff;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      header h1 {
+        margin-bottom: 0.5rem;
+      }
+
+      .meta {
+        color: #777;
+        font-size: 0.9rem;
+      }
+
+      main {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 2rem 1rem;
+        background-color: #fff;
+      }
+
+      main img.banner {
+        display: block;
+        margin: 2rem auto;
+        max-width: 80%;
+        height: auto;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      article p {
+        margin-bottom: 1.5rem;
+        text-align: justify;
+      }
+
+      footer {
+        text-align: center;
+        padding: 1rem;
+        background-color: #eee;
+        font-size: 0.9rem;
+        color: #666;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigasi melayang bawah -->
+    <div class="floating-nav" id="floatingNav">
+      <a href="../../home.html" title="Beranda"><i class="fas fa-house"></i></a>
+      <a href="../../articles.html" title="Artikel"
+        ><i class="fas fa-book"></i
+      ></a>
+      <a href="../../about.html" title="Tentang Kami"
+        ><i class="fab fa-linux"></i
+      ></a>
+      <a href="../../community.html" title="Komunitas"
+        ><i class="fas fa-globe"></i
+      ></a>
+    </div>
+
+    <header>
+      <h1>Mengenal Richard Stallman dan GNU Project</h1>
+      <p class="meta">Dipublikasikan: 23 Juli 2025 | Oleh: Faisal (Admin)</p>
+    </header>
+
+    <main>
+      <img
+        src="../../static/assets/img/what_is_gnu.jpg"
+        alt="Banner Kernel Linux"
+        class="banner"
+      />
+      <article>
+        <p>
+          Richard Stallman adalah seorang tokoh legendaris dalam dunia perangkat
+          lunak bebas. Ia dikenal luas sebagai pendiri Free Software Foundation
+          (FSF) dan inisiator <strong>GNU Project</strong>, sebuah gerakan besar
+          yang bertujuan untuk menciptakan sistem operasi bebas yang sepenuhnya
+          dapat dimodifikasi, dipelajari, dan didistribusikan ulang oleh siapa
+          saja.
+        </p>
+        <p>
+          GNU sendiri merupakan akronim rekursif dari
+          <em>"GNU's Not Unix!"</em>, menegaskan bahwa meskipun GNU memiliki
+          banyak kemiripan teknis dengan sistem operasi Unix, ia dibangun dengan
+          filosofi kebebasan dan tanpa menggunakan kode dari Unix.
+        </p>
+        <p>
+          Pada tahun 1983, Stallman mengumumkan proyek GNU sebagai bentuk
+          perlawanan terhadap tren meningkatnya perangkat lunak berpemilik
+          (proprietary software), yang menurutnya merampas kebebasan pengguna
+          dalam mengontrol komputer mereka sendiri.
+        </p>
+        <p>
+          Salah satu kontribusi besar dari GNU Project adalah pembuatan banyak
+          komponen penting sistem operasi seperti <code>bash</code>,
+          <code>gcc</code>, <code>glibc</code>, dan berbagai utilitas inti
+          lainnya. Namun, proyek ini belum memiliki kernel yang stabil hingga
+          munculnya <strong>Linux</strong> oleh Linus Torvalds pada 1991, yang
+          kemudian melengkapi sistem menjadi apa yang sekarang dikenal sebagai
+          <strong>GNU/Linux</strong>.
+        </p>
+        <p>
+          Stallman tidak hanya fokus pada aspek teknis, tetapi juga
+          mempopulerkan ideologi
+          <strong>empat kebebasan perangkat lunak</strong>: kebebasan untuk
+          menjalankan, mempelajari, menyebarluaskan, dan memodifikasi perangkat
+          lunak. Filosofi ini menjadi fondasi dari seluruh gerakan perangkat
+          lunak bebas dan masih relevan hingga saat ini.
+        </p>
+        <p>
+          Melalui perjuangannya, Richard Stallman telah menginspirasi jutaan
+          orang di seluruh dunia untuk memperjuangkan kebebasan digital dan hak
+          atas perangkat lunak yang transparan dan etis. GNU Project pun terus
+          hidup sebagai simbol penting dari dunia open source dan software
+          bebas.
+        </p>
+      </article>
+    </main>
+
+    <script>
+      const nav = document.getElementById("floatingNav");
+      let scrollTimeout;
+
+      window.addEventListener("scroll", () => {
+        nav.classList.add("hide");
+
+        clearTimeout(scrollTimeout);
+        scrollTimeout = setTimeout(() => {
+          nav.classList.remove("hide");
+        }, 300);
+      });
+    </script>
+    <!-- Footer opsional -->
+    <footer>
+      <p>&copy; 2025 Gnunesia</p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Daftar Artikel - gNewNesia</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <style>
+      body {
+        font-family: sans-serif;
+        margin: 0;
+        line-height: 1.6;
+        background: #f5f5f5;
+      }
+
+      h1 {
+        text-align: center;
+        margin: 20px 0;
+      }
+
+      .article-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 20px;
+        padding: 20px;
+      }
+
+      .article-card {
+        border: 1px solid #ccc;
+        border-radius: 12px;
+        overflow: hidden;
+        background: #fff;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+      }
+
+      .article-card img {
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+      }
+
+      .article-card .info {
+        padding: 15px;
+        flex-grow: 1;
+      }
+
+      .article-card h3 {
+        margin: 0 0 10px;
+        font-size: 1.1em;
+      }
+
+      .article-card .more {
+        display: block;
+        padding: 10px 15px;
+        background: #2c3e50;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        font-weight: bold;
+        border-top: 1px solid #ccc;
+      }
+
+      .pagination {
+        margin-top: 2rem;
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+      }
+
+      .pagination button {
+        margin: 0 5px;
+        padding: 8px 12px;
+        border: none;
+        background: #ddd;
+        color: #2c3e50;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      .pagination button.active {
+        background: #2c3e50;
+        color: white;
+        font-weight: bold;
+      }
+
+      .floating-nav {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background: #2c3e50;
+        padding: 10px 15px;
+        border-radius: 8px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+        display: flex;
+        flex-direction: row;
+        gap: 15px;
+        align-items: center;
+        transition: transform 0.3s ease;
+        z-index: 1000;
+      }
+
+      .floating-nav a {
+        color: white;
+        font-size: 20px;
+        text-decoration: none;
+      }
+
+      .floating-nav.hide {
+        transform: translateY(150%);
+      }
+
+      .banner {
+        padding: 6rem 1rem 2rem; /* ruang untuk navbar di atas */
+        text-align: center;
+        background: #2c3e50;
+        color: #fff;
+      }
+
+      .banner h1 {
+        font-size: 2.5rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .banner p {
+        font-size: 1.2rem;
+        color: #ddd;
+      }
+
+      footer {
+        margin-top: 4rem;
+        padding: 1rem;
+        text-align: center;
+        font-size: 0.9rem;
+        color: #777;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Banner utama -->
+    <header class="banner">
+      <p>Kebebasan, Kode Terbuka, dan Komunitas</p>
+    </header>
+
+    <h1>Daftar Artikel</h1>
+    <div id="articleList" class="article-grid"></div>
+    <div class="pagination" id="pagination"></div>
+
+    <!-- Navigasi melayang -->
+    <div class="floating-nav" id="floatingNav">
+      <a href="home.html" title="Beranda"><i class="fas fa-house"></i></a>
+      <a href="articles.html" title="Artikel"><i class="fas fa-book"></i></a>
+      <a href="about.html" title="Tentang Kami"><i class="fab fa-linux"></i></a>
+      <a href="community.html" title="Komunitas"
+        ><i class="fas fa-globe"></i
+      ></a>
+    </div>
+
+    <script>
+      const articlesPerPage = 12;
+      let currentPage = 1;
+      let articles = [];
+
+      function displayArticles() {
+        const start = (currentPage - 1) * articlesPerPage;
+        const end = start + articlesPerPage;
+        const currentArticles = articles.slice(start, end);
+
+        const container = document.getElementById("articleList");
+        container.innerHTML = "";
+
+        currentArticles.forEach((artikel) => {
+          const card = document.createElement("div");
+          card.className = "article-card";
+          card.innerHTML = `
+            <img src="${artikel.gambar}" alt="${artikel.judul}">
+            <div class="info">
+              <h3>${artikel.judul}</h3>
+              <p><small>${artikel.tanggal} · ${artikel.penulis}</small></p>
+            </div>
+            <a class="more" href="article.html?id=${artikel.id}">Selengkapnya</a>
+          `;
+          container.appendChild(card);
+        });
+
+        updatePagination();
+      }
+
+      function updatePagination() {
+        const totalPages = Math.ceil(articles.length / articlesPerPage);
+        const pagination = document.getElementById("pagination");
+        pagination.innerHTML = "";
+
+        for (let i = 1; i <= totalPages; i++) {
+          const btn = document.createElement("button");
+          btn.textContent = i;
+          if (i === currentPage) btn.classList.add("active");
+          btn.onclick = () => {
+            currentPage = i;
+            displayArticles();
+          };
+          pagination.appendChild(btn);
+        }
+      }
+
+      fetch("js/articles.json")
+        .then((res) => res.json())
+        .then((data) => {
+          if (!Array.isArray(data)) {
+            document.getElementById("articleList").innerHTML =
+              "<p>Gagal memuat data artikel.</p>";
+            return;
+          }
+          articles = data;
+          displayArticles();
+        })
+        .catch((err) => {
+          document.getElementById("articleList").innerHTML =
+            "<p>Gagal memuat artikel.</p>";
+          console.error(err);
+        });
+
+      // Floating nav behavior: hide saat scroll, muncul saat berhenti
+      const nav = document.getElementById("floatingNav");
+      let scrollTimeout;
+
+      window.addEventListener("scroll", () => {
+        nav.classList.add("hide");
+
+        clearTimeout(scrollTimeout);
+        scrollTimeout = setTimeout(() => {
+          nav.classList.remove("hide");
+        }, 300);
+      });
+    </script>
+
+    <footer>
+      <p>&copy; 2025 Gnunesia</p>
+    </footer>
+  </body>
+</html>
