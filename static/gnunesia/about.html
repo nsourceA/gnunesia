@@ -3,8 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>gNewNesia</title>
+    <title>About - gNewNesia</title>
     <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap"
+      rel="stylesheet"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -25,60 +29,84 @@
       <a href="articles.html" title="Artikel"><i class="fas fa-book"></i></a>
       <a href="about.html" title="Tentang Kami"><i class="fab fa-linux"></i></a>
       <a href="community.html" title="Komunitas"
-        ><i class="fas fa-globe"></i
+        ><i class="fas fa-people-group"></i
       ></a>
     </div>
 
-  <!-- Header Halaman -->
-  <header class="banner">
-    <h1>Tentang Kami</h1>
-    <p>Mengenal lebih dekat tentang siapa kami, misi kami, dan apa yang sedang kami bangun</p>
-  </header>
-
-  <!-- Konten Tentang Kami -->
-  <section class="latest">
-    <!-- Who we are -->
-    <div class="about-section">
-      <h2>Who we are?</h2>
-      <p>Kami adalah komunitas independen yang berfokus pada edukasi, eksplorasi, dan penyebaran teknologi berbasis Linux dan open source kepada semua kalangan.</p>
-    </div>
-
-    <!-- Visi & Misi -->
-    <div class="about-section">
-      <h2>Visi & Misi</h2>
-      <p><strong>Visi:</strong> Menjadi sumber terpercaya dalam dunia Linux dan open source yang bebas iklan dan penuh kebebasan.</p>
-      <p><strong>Misi:</strong>
-        <ul>
-          <li>Menyediakan artikel dan panduan berkualitas tinggi seputar Linux dan software open source</li>
-          <li>Mendorong kebebasan digital melalui edukasi dan informasi terbuka</li>
-          <li>Menghubungkan pengguna baru dan komunitas melalui konten yang inklusif</li>
-        </ul>
+    <!-- Header Halaman -->
+    <header class="banner">
+      <p>
+        Mengenal lebih dekat tentang siapa kami, misi kami, dan apa yang sedang
+        kami bangun
       </p>
-    </div>
+    </header>
 
-    <!-- Proyek Kita -->
-    <div class="about-section">
-      <h2>Proyek Kita</h2>
-      <p>Situs ini adalah salah satu proyek awal. Kami juga sedang merancang repositori dokumentasi, video tutorial, dan rencana komunitas daring yang akan hadir dalam waktu dekat.</p>
-    </div>
-  </section>
+    <!-- Konten Tentang Kami -->
+    <section class="latest">
+      <!-- Who we are -->
+      <div class="about-section">
+        <h3>Who we are?</h3>
+        <p>
+          Kami adalah komunitas independen yang berfokus pada edukasi,
+          eksplorasi, dan penyebaran teknologi berbasis Linux dan open source
+          kepada semua kalangan.
+        </p>
+      </div>
 
-  <script>
-    const nav = document.getElementById("floatingNav");
-    let scrollTimeout;
+      <!-- Visi & Misi -->
+      <div class="about-section">
+        <h3>Visi & Misi</h3>
 
-    window.addEventListener("scroll", () => {
-      nav.classList.add("hide");
+        <strong>Visi:</strong>
+        <ul>
+          <li>
+            Menjadi sumber terpercaya dalam dunia Linux dan open source yang
+            bebas iklan dan penuh kebebasan.
+          </li>
+        </ul>
 
-      clearTimeout(scrollTimeout);
-      scrollTimeout = setTimeout(() => {
-        nav.classList.remove("hide");
-      }, 300);
-    });
-  </script>
-    <!-- Footer opsional -->
+        <strong>Misi:</strong>
+        <ul>
+          <li>
+            Menyediakan artikel dan panduan berkualitas tinggi seputar Linux dan
+            software open source
+          </li>
+          <li>
+            Mendorong kebebasan digital melalui edukasi dan informasi terbuka
+          </li>
+          <li>
+            Menghubungkan pengguna baru dan komunitas melalui konten yang
+            inklusif
+          </li>
+        </ul>
+      </div>
+
+      <div class="about-section">
+        <h3>Proyek Kita</h3>
+        <p>
+          Situs ini adalah salah satu proyek awal. Kami juga sedang merancang
+          repositori dokumentasi, video tutorial, dan rencana komunitas daring
+          yang akan hadir dalam waktu dekat.
+        </p>
+      </div>
+    </section>
+
+    <script>
+      const nav = document.getElementById("floatingNav");
+      let scrollTimeout;
+
+      window.addEventListener("scroll", () => {
+        nav.classList.add("hide");
+
+        clearTimeout(scrollTimeout);
+        scrollTimeout = setTimeout(() => {
+          nav.classList.remove("hide");
+        }, 300);
+      });
+    </script>
+    <!-- Footer -->
     <footer>
       <p>&copy; 2025 Gnunesia</p>
     </footer>
-</body>
+  </body>
 </html>

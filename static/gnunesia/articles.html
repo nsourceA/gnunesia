@@ -5,12 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Daftar Artikel - gNewNesia</title>
     <link
+      href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap"
+      rel="stylesheet"
+    />
+    <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
     <style>
       body {
-        font-family: sans-serif;
+        font-family: "Source Code Pro", monospace;
         margin: 0;
         line-height: 1.6;
         background: #f5f5f5;
@@ -131,6 +135,12 @@
         color: #ddd;
       }
 
+      @media (max-width: 600px) {
+        .banner {
+          padding-top: 2.5rem;
+        }
+      }
+
       footer {
         margin-top: 4rem;
         padding: 1rem;
@@ -156,7 +166,7 @@
       <a href="articles.html" title="Artikel"><i class="fas fa-book"></i></a>
       <a href="about.html" title="Tentang Kami"><i class="fab fa-linux"></i></a>
       <a href="community.html" title="Komunitas"
-        ><i class="fas fa-globe"></i
+        ><i class="fas fa-people-group"></i
       ></a>
     </div>
 
@@ -238,6 +248,7 @@
       });
     </script>
 
+    <!-- Footer -->
     <footer>
       <p>&copy; 2025 Gnunesia</p>
     </footer>

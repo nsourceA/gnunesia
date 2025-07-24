@@ -6,10 +6,14 @@
     <title>gNewNesia</title>
     <link rel="stylesheet" href="css/style.css" />
     <link
+      href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap"
+      rel="stylesheet"
+    />
+    <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
-    <!-- Gunakan CDN Icon dari Font Awesome -->
+    <!-- CDN Icon dari Font Awesome -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
@@ -25,24 +29,24 @@
       <a href="articles.html" title="Artikel"><i class="fas fa-book"></i></a>
       <a href="about.html" title="Tentang Kami"><i class="fab fa-linux"></i></a>
       <a href="community.html" title="Komunitas"
-        ><i class="fas fa-globe"></i
+        ><i class="fas fa-people-group"></i
       ></a>
     </div>
 
     <!-- Banner utama -->
     <header class="banner">
-      <h1>.gNewNesia</h1>
+      <h1>.gNewNesia<i class="fab fa-linux" style="margin-left: 10px"></i></h1>
       <p>
         Media komunitas yang membahas segala hal seputar Linux dan dunia Open
         Source
       </p>
     </header>
 
-    <!-- Bagian artikel terbaru (Latest) -->
+    <!-- Pendahuluan -->
     <section class="latest">
       <h2>Pengenalan</h2>
       <div class="article-grid">
-        <!-- Artikel Dummy #1 -->
+        <!-- Artikel #1 -->
         <div class="article-card">
           <h3>Mengenal Kernel Linux dan sang jenius Linus Torvalds</h3>
           <img
@@ -54,9 +58,9 @@
           >
         </div>
 
-        <!-- Artikel Dummy #2 -->
+        <!-- Artikel #2 -->
         <div class="article-card">
-          <h3>Mengenal Richard Stallman dan GNU Project</h3>
+          <h3>Mengenal lebih dekat Richard Stallman dan GNU Project</h3>
           <img
             src="static/assets/img/what_is_gnu.jpg"
             alt="Thumbnail Artikel 2"
@@ -66,9 +70,9 @@
           >
         </div>
 
-        <!-- Artikel Dummy #3 -->
+        <!-- Artikel #3 -->
         <div class="article-card">
-          <h3>Gerakan Free Software dan pengaruhnya terhadap open source</h3>
+          <h3>Gerakan Free Software dan pengaruhnya pada open source</h3>
           <img
             src="static/assets/img/free_software_movement.jpg"
             alt="Thumbnail Artikel 3"
@@ -78,7 +82,7 @@
           >
         </div>
 
-        <!-- Artikel Dummy #4 -->
+        <!-- Artikel #4 -->
         <div class="article-card">
           <h3>Distro Linux untuk memulai perjalanan di dunia open source</h3>
           <img
@@ -91,7 +95,7 @@
         </div>
       </div>
 
-      <!-- Pagination (halaman berikutnya) -->
+      <!-- Pagination -->
       <div class="pagination">
         <a href="index.html" class="page active">1</a>
         <a href="page2.html" class="page">2</a>
@@ -99,6 +103,7 @@
       </div>
     </section>
 
+    <!-- Floating Nav Script -->
     <script>
       const nav = document.getElementById("floatingNav");
       let scrollTimeout;
@@ -112,7 +117,8 @@
         }, 300);
       });
     </script>
-    <!-- Footer opsional -->
+
+    <!-- Footer -->
     <footer>
       <p>&copy; 2025 Gnunesia</p>
     </footer>
