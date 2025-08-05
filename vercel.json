@@ -1,32 +1,4 @@
 {
-  "rewrites": [
-    {
-      "source": "/",
-      "destination": "/index.html"
-    },
-    {
-      "source": "/articles",
-      "destination": "/articles.html"
-    },
-    {
-      "source": "/about",
-      "destination": "/static/about.html"
-    },
-    {
-      "source": "/community",
-      "destination": "/static/community.html"
-    },
-    {
-      "source": "/page2",
-      "destination": "/static/page2.html"
-    },
-    {
-      "source": "/page3",
-      "destination": "/static/page3.html"
-    },
-    {
-      "source": "/articles/:id",
-      "destination": "/static/articles/article:id.html"
-    }
-  ]
+  "cleanUrls": true
 }
+
