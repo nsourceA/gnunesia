@@ -4,12 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Linux Freedom Media</title>
-    <link rel="stylesheet" href="../gnunesia/css/style.css" />
+    <link rel="stylesheet" href="/static/gnunesia/css/style.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
-    <!-- Gunakan CDN Icon dari Font Awesome -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
@@ -19,7 +18,6 @@
     />
   </head>
   <body>
-    <!-- Navigasi -->
     <div class="floating-nav" id="floatingNav">
       <a href="/" title="Beranda"><i class="fas fa-house"></i></a>
       <a href="/articles" title="Artikel"><i class="fas fa-book"></i></a>
@@ -29,7 +27,6 @@
       ></a>
     </div>
 
-    <!-- Konten Artikel -->
     <h1 id="judul-artikel"></h1>
     <p id="meta-artikel"></p>
     <img id="banner-artikel" src="" alt="Banner Artikel" />
@@ -39,12 +36,12 @@
       <p>&copy; 2025 Gnunesia</p>
     </footer>
 
-    <!-- Data Artikel -->
     <script>
-      const params = new URLSearchParams(window.location.search);
-      const id = params.get("id");
+      // Mengambil ID dari URL path (misalnya dari /articles/001)
+      const pathSegments = window.location.pathname.split("/");
+      const id = pathSegments[pathSegments.length - 1];
 
-      fetch("js/articles.json")
+      fetch("/js/articles.json")
         .then((response) => response.json())
         .then((articles) => {
           const artikel = articles.find((a) => a.id === id);

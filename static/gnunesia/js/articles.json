@@ -4,125 +4,125 @@
     "judul": "Kata Stallman tentang software bebas",
     "tanggal": "2025-07-23",
     "penulis": "Tim GNUnesia",
-    "gambar": "static/assets/img/stallman-quote-freesoftware.jpg"
+    "gambar": "/static/assets/img/stallman-quote-freesoftware.jpg"
   },
   {
     "id": "002",
     "judul": "Distribusi Linux Ringan untuk Komputer Lama",
     "tanggal": "2025-07-23",
     "penulis": "Tim GNUnesia",
-    "gambar": "static/assets/img/lightweight_linux.jpg"
+    "gambar": "/static/assets/img/lightweight_linux.jpg"
   },
   {
     "id": "003",
     "judul": "Perbedaan Antara GNU dan Linux",
     "tanggal": "2025-07-23",
     "penulis": "Redaksi",
-    "gambar": "static/assets/img/gnu_vs_linux.jpg"
+    "gambar": "/static/assets/img/gnu_vs_linux.jpg"
   },
   {
     "id": "004",
     "judul": "Cara Memulai dengan Terminal Linux",
     "tanggal": "2025-07-23",
     "penulis": "Redaksi",
-    "gambar": "static/assets/img/linux_terminal.jpg"
+    "gambar": "/static/assets/img/linux_terminal.jpg"
   },
   {
     "id": "005",
     "judul": "Manjaro vs Ubuntu: Mana yang Lebih Cocok untuk Pemula?",
     "tanggal": "2025-07-23",
     "penulis": "Kontributor",
-    "gambar": "static/assets/img/manjaro_vs_ubuntu.jpg"
+    "gambar": "/static/assets/img/manjaro_vs_ubuntu.jpg"
   },
   {
     "id": "006",
     "judul": "Command Line Tools Favorit di Dunia Open Source",
     "tanggal": "2025-07-23",
     "penulis": "Admin GNUnesia",
-    "gambar": "static/assets/img/cli_tools.jpg"
+    "gambar": "/static/assets/img/cli_tools.jpg"
   },
   {
     "id": "007",
     "judul": "Apa Itu Distro Rolling Release?",
     "tanggal": "2025-07-23",
     "penulis": "Redaksi",
-    "gambar": "static/assets/img/rolling_release.jpg"
+    "gambar": "/static/assets/img/rolling_release.jpg"
   },
   {
     "id": "008",
     "judul": "Memahami Sistem File Linux",
     "tanggal": "2025-07-23",
     "penulis": "Tim GNUnesia",
-    "gambar": "static/assets/img/linux_filesystem.jpg"
+    "gambar": "/static/assets/img/linux_filesystem.jpg"
   },
   {
     "id": "009",
     "judul": "Keunggulan Flatpak dan Snap Dibanding Paket Tradisional",
     "tanggal": "2025-07-23",
     "penulis": "Redaksi",
-    "gambar": "static/assets/img/flatpak_snap.jpg"
+    "gambar": "/static/assets/img/flatpak_snap.jpg"
   },
   {
     "id": "010",
     "judul": "Cara Dual Boot Linux dan Windows dengan Aman",
     "tanggal": "2025-07-23",
     "penulis": "Kontributor",
-    "gambar": "static/assets/img/dualboot.jpg"
+    "gambar": "/static/assets/img/dualboot.jpg"
   },
   {
     "id": "011",
     "judul": "Kebebasan dalam Dunia Open Source",
     "tanggal": "2025-07-23",
     "penulis": "Tim GNUnesia",
-    "gambar": "static/assets/img/freedom.jpg"
+    "gambar": "/static/assets/img/freedom.jpg"
   },
   {
     "id": "012",
     "judul": "Sejarah Singkat GNU Project",
     "tanggal": "2025-07-23",
     "penulis": "Redaksi",
-    "gambar": "static/assets/img/gnu_project.jpg"
+    "gambar": "/static/assets/img/gnu_project.jpg"
   },
   {
     "id": "013",
     "judul": "Belajar Shell Scripting Dasar",
     "tanggal": "2025-07-23",
     "penulis": "Redaksi",
-    "gambar": "static/assets/img/shell_script.jpg"
+    "gambar": "/static/assets/img/shell_script.jpg"
   },
   {
     "id": "014",
     "judul": "Mengamankan Linux Desktop Anda",
     "tanggal": "2025-07-23",
     "penulis": "Kontributor",
-    "gambar": "static/assets/img/linux_security.jpg"
+    "gambar": "/static/assets/img/linux_security.jpg"
   },
   {
     "id": "015",
     "judul": "Apa Itu Kernel dan Mengapa Penting?",
     "tanggal": "2025-07-23",
     "penulis": "Tim GNUnesia",
-    "gambar": "static/assets/img/kernel.jpg"
+    "gambar": "/static/assets/img/kernel.jpg"
   },
   {
     "id": "016",
     "judul": "Daftar Game Populer yang Tersedia di Linux",
     "tanggal": "2025-07-23",
     "penulis": "Redaksi",
-    "gambar": "static/assets/img/linux_games.jpg"
+    "gambar": "/static/assets/img/linux_games.jpg"
   },
   {
     "id": "017",
     "judul": "Desktop Environment Populer: GNOME vs KDE vs Xfce",
     "tanggal": "2025-07-23",
     "penulis": "Tim GNUnesia",
-    "gambar": "static/assets/img/de_comparison.jpg"
+    "gambar": "/static/assets/img/de_comparison.jpg"
   },
   {
     "id": "018",
     "judul": "Tips dan Trik Menggunakan Vim untuk Pemula",
     "tanggal": "2025-07-23",
     "penulis": "Kontributor",
-    "gambar": "static/assets/img/vim_tips.jpg"
+    "gambar": "/static/assets/img/vim_tips.jpg"
   }
 ]
