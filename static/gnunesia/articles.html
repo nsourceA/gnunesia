@@ -185,7 +185,7 @@
           const card = document.createElement("div");
           card.className = "article-card";
           card.innerHTML = `
-            <img src="/${artikel.gambar}" alt="${artikel.judul}">
+            <img src="${artikel.gambar}" alt="${artikel.judul}">
             <div class="info">
               <h3>${artikel.judul}</h3>
               <p><small>${artikel.tanggal} · ${artikel.penulis}</small></p>
@@ -215,7 +215,7 @@
         }
       }
 
-      fetch("js/articles.json")
+      fetch("/js/articles.json")
         .then((res) => res.json())
         .then((data) => {
           if (!Array.isArray(data)) {
