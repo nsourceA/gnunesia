@@ -1,10 +1,10 @@
-# 👋 Halo!
+# Halo!
 
 Gw mau kasih penjelasan singkat ke kalian yang kebetulan liat repo ini, so...
 
 ## 1. Apa itu gNewNesia?
 
-gNewNesia itu wadah buat artikel yang ngebahas Linux dan Open Source terupdate di Indonesia.
+gNewNesia itu wadah buat artikel yang ngebahas Linux dan Open Source di Indonesia, ini murni proyek hobi dan terbatas.
 
 ## 2. Kenapa gw buat ginian?
 
@@ -17,9 +17,7 @@ Karena waktu ide ini muncul, gw lagi susah tidur. Terus kepikiran, "Menarik juga
 ## 3. Kedepannya gimana?
 
 Yah, kita liat aja nanti bakal jadi kayak gimana.  
-Berhubung sekarang gw **habis resign** sebagai "IT Superman", gw manfaatin waktu luang ini buat belajar coding.
-
-*(Fun fact: dari pagi sampai malam cuma buat pelajarin HTML doang!)*
+Berhubung sekarang gw **habis resign** sebagai "IT Superman", gw manfaatin waktu luang ini buat memperdalam coding lagi.
 
 > Terima kasih udah mampir!  
 > Jangan harap keren... tapi mudah-mudahan berguna 😄
